@@ -36,7 +36,7 @@ const Register = () => {
         }
         try {
             setLoading(true);
-            const response = await axios.post("http://localhost:5000/api/auth/register", formData);
+            const response = await axios.post("https://kinspace.onrender.com/api/auth/register", formData);
 
             console.log(response.data)
             

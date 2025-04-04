@@ -25,7 +25,7 @@ const Login = () => {
         setError(""); // Reset error before making request
 
         try {
-            const response = await axios.post("http://localhost:5000/api/auth/login", formData);
+            const response = await axios.post("https://kinspace.onrender.com/api/auth/login", formData);
             const { user, token } = response.data;
 
             console.log("login se: ",user, token);
