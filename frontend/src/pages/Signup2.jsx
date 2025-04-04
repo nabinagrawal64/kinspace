@@ -51,7 +51,7 @@ export default function SignUp() {
                 {/* Logo */}
                 <h1 className="text-white text-5xl font-lobster mt-20 mb-30 tracking-wider"> Kinspace </h1>
 
-                <form onClick={handleSendOTP}  className="space-y-2 ">
+                <form className="space-y-2 ">
                     {/* Sign Up Title */}
                     <h2 className="text-white flex text-2xl font-semibold mb-4"> Sign Up </h2>
 
@@ -71,7 +71,7 @@ export default function SignUp() {
                     </div>
 
                     {/* Send OTP Button */}
-                    <button disabled={loading} className="w-full bg-gradient-to-br cursor-pointer from-blue-600 to-pink-500 text-white font-semibold py-2 rounded-md mt-4">
+                    <button onClick={handleSendOTP} disabled={loading} className="w-full bg-gradient-to-br cursor-pointer from-blue-600 to-pink-500 text-white font-semibold py-2 rounded-md mt-4">
                         {loading ? (
                             <div className="flex items-center justify-center">
                                 <LoaderCircle className="animate-spin text-center w-6 h-6 mr-2" />
