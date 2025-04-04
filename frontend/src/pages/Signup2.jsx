@@ -32,7 +32,7 @@ export default function SignUp() {
             if (response.data.success) {
                 console.log("OTP Sent Successfully: ", response.data.otpCode);
                 setOtp(response.data.otpCode);
-                alert("OTP sent successfully!");
+                alert("OTP sent successfully!", response.data.otpCode);
                 navigate("/verify-otp", { state: { email }});
             } else {
                 alert("Failed to send OTP.");
