@@ -11,7 +11,8 @@ export const useAuthStore = create(
             otp: null,
 
             setAuthData: (user, token) => {
-                set({ user, token, isAuthenticated: true });
+                console.log("setting auth data: ", user, token);
+                set({ user: user, token: token, isAuthenticated: true });
             },
 
             setLoading: (isLoading) => {

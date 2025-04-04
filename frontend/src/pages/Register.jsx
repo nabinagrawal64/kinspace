@@ -19,7 +19,7 @@ const Register = () => {
     });
     
     const navigate = useNavigate();
-    const { setToken, loading, setLoading } = useAuthStore();
+    const { setAuthData, loading, setLoading } = useAuthStore();
 
     const [showPassword, setShowPassword] = useState(false);
 
@@ -43,7 +43,7 @@ const Register = () => {
             if (response.data.success) {
                 console.log("Signup Success:", response.data);
                 alert("Account created successfully!");
-                setToken(response.data.token); // Set token in store
+                setAuthData(response.data.user, response.data.token); // Set token in store
                 navigate("/home"); // Redirect on success
             } else {
                 alert("Failed to register");
