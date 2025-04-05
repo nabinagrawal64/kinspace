@@ -32,7 +32,7 @@ const Login = () => {
 
             // Store auth data in Zustand
             setAuthData(user, token);
-            navigate("/home"); // Redirect to dashboard
+            navigate("/social-feed"); // Redirect to dashboard
         } catch (error) {
             setError(error.response?.data?.error || "Invalid credentials. Try again.");
         } finally {

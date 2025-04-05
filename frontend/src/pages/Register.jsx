@@ -44,7 +44,7 @@ const Register = () => {
                 console.log("Signup Success:", response.data);
                 alert("Account created successfully!");
                 setAuthData(response.data.user, response.data.token); // Set token in store
-                navigate("/home"); // Redirect on success
+                navigate("/social-feed"); // Redirect on success
             } else {
                 alert("Failed to register");
                 return;
